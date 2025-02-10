@@ -1,4 +1,4 @@
-echo Debloat + Tweaks by WinterRidozi
+echo Debloat + Tweaks by WinterRidozi@telegram
 adb devices
 echo Boost Battery
 adb shell settings put global adaptive_battery_management_enabled 0
