@@ -336,5 +336,3 @@ adb shell pm uninstall --user 0 in.amazon.mShop.android.shopping
 adb shell pm uninstall --user 0 ru.yandex.disk
 adb shell pm uninstall --user 0 ru.yandex.searchplugin
 adb shell pm uninstall --user 0 ru.yandex.yandexmaps
-adb shell cmd package install-existing com.sec.android.soagent
-adb shell cmd package install-existing com.sec.android.systemupdate 
