@@ -18,21 +18,24 @@ adb shell settings put global bug_report 0
 adb shell settings put global debug_app 0
 
 echo Disabling GOS App
-adb shell pm disable-user --user 0 com.samsung.android.game.gos
-adb shell pm clear --user 0 com.samsung.android.game.gos
-adb shell settings put secure game_auto_temperature_control 0
+#adb shell pm uninstall --user 0 com.samsung.android.mdx
+#adb shell pm uninstall --user 0 com.samsung.android.mdx.kit
+#adb shell pm uninstall --user 0 com.samsung.cmh                                        #Somehow related to Video Calling
+#adb shell pm uninstall --user 0 com.samsung.crane                                      #Video Calling related 
 adb shell pm uninstall --user 0 android.autoinstalls.config.samsung
 adb shell pm uninstall --user 0 com.amazon.avod.thirdpartyclient              
 adb shell pm uninstall --user 0 com.android.apps.tag                                    #Tags
 adb shell pm uninstall --user 0 com.android.bips                                        #Default Print service
 adb shell pm uninstall --user 0 com.android.bipscom.wsomacp
 adb shell pm uninstall --user 0 com.android.bookmarkprovider                            #Bookmarks Provider
-adb shell pm uninstall --user 0 com.android.calllogbackup        
+adb shell pm uninstall --user 0 com.android.calllogbackup                               
+adb shell pm uninstall --user 0 com.android.chrome
 adb shell pm uninstall --user 0 com.android.cts.ctsshim
 adb shell pm uninstall --user 0 com.android.cts.priv.ctsshim
 adb shell pm uninstall --user 0 com.android.dreams.basic                                #Basic Daydreams
 adb shell pm uninstall --user 0 com.android.dreams.phototable
-adb shell pm uninstall --user 0 com.android.dynsystem                                   
+adb shell pm uninstall --user 0 com.android.dynsystem
+adb shell pm uninstall --user 0 com.android.egg                                        
 adb shell pm uninstall --user 0 com.android.emergency
 adb shell pm uninstall --user 0 com.android.hotspot2                                    #OsuLogin
 adb shell pm uninstall --user 0 com.android.hotwordenrollment.okgoogle
@@ -102,6 +105,7 @@ adb shell pm uninstall --user 0 com.google.android.apps.gcs								#Google conne
 adb shell pm uninstall --user 0 com.google.android.apps.maps
 adb shell pm uninstall --user 0 com.google.android.apps.messaging
 adb shell pm uninstall --user 0 com.google.android.apps.photos
+adb shell pm uninstall --user 0 com.google.android.apps.restore
 adb shell pm uninstall --user 0 com.google.android.apps.setupwizard.searchselector
 adb shell pm uninstall --user 0 com.google.android.apps.tachyon                         #Google Duo
 adb shell pm uninstall --user 0 com.google.android.apps.turbo
@@ -113,6 +117,7 @@ adb shell pm uninstall --user 0 com.google.android.cellbroadcastreceiver
 adb shell pm uninstall --user 0 com.google.android.configupdater
 adb shell pm uninstall --user 0 com.google.android.ext.shared                           #Android Shared Library
 adb shell pm uninstall --user 0 com.google.android.feedback                             #Crash reports feedbacks
+adb shell pm uninstall --user 0 com.google.android.gm                                   #Gmail 
 adb shell pm uninstall --user 0 com.google.android.gms.location.history
 adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox
 adb shell pm uninstall --user 0 com.google.android.healthconnect.controller
@@ -122,8 +127,11 @@ adb shell pm uninstall --user 0 com.google.android.partnersetup
 adb shell pm uninstall --user 0 com.google.android.printservice.recommendation
 adb shell pm uninstall --user 0 com.google.android.projection.gearhead                  #Android Auto
 adb shell pm uninstall --user 0 com.google.android.setupwizard
+adb shell pm uninstall --user 0 com.google.android.tts                                  #Google Text to Speech
 adb shell pm uninstall --user 0 com.google.android.videos                               #Video Player
+adb shell pm uninstall --user 0 com.google.android.youtube
 adb shell pm uninstall --user 0 com.google.ar.core                                      #AR Core
+adb shell pm uninstall --user 0 com.google.audio.hearing.visualization.accessibility.scribe  #Live Transcribe
 adb shell pm uninstall --user 0 com.hiya.star                                           #Spam Filter App
 adb shell pm uninstall --user 0 com.knox.vpn.proxyhandler
 adb shell pm uninstall --user 0 com.microsoft.appmanager
@@ -193,6 +201,7 @@ adb shell pm uninstall --user 0 com.samsung.android.game.gos
 adb shell pm uninstall --user 0 com.samsung.android.hdmapp
 adb shell pm uninstall --user 0 com.samsung.android.homemode
 adb shell pm uninstall --user 0 com.samsung.android.icecone                             #Keyboard Content Handler
+adb shell pm uninstall --user 0 com.samsung.android.intellivoiceservice
 adb shell pm uninstall --user 0 com.samsung.android.ipsgeofence                         #Samsung Visit-in
 adb shell pm uninstall --user 0 com.samsung.android.kidsinstaller                       #Kids installer
 adb shell pm uninstall --user 0 com.samsung.android.knox.analytics.uploader
@@ -206,6 +215,7 @@ adb shell pm uninstall --user 0 com.samsung.android.mapsagent                   
 adb shell pm uninstall --user 0 com.samsung.android.mateagent                           #Samsung Galaxy Agents
 adb shell pm uninstall --user 0 com.samsung.android.mcfds
 adb shell pm uninstall --user 0 com.samsung.android.mcfserver                           #Samsung Multiple Connectivity
+adb shell pm uninstall --user 0 com.samsung.android.mdecservice                         #Call and text on other devices
 adb shell pm uninstall --user 0 com.samsung.android.mdm                                 #Knox manage
 adb shell pm uninstall --user 0 com.samsung.android.mdx
 adb shell pm uninstall --user 0 com.samsung.android.mobileservice                       #Samsung Experience
@@ -216,7 +226,6 @@ adb shell pm uninstall --user 0 com.samsung.android.samsungpass
 adb shell pm uninstall --user 0 com.samsung.android.samsungpass                         #Samsung pass
 adb shell pm uninstall --user 0 com.samsung.android.samsungpassautofill
 adb shell pm uninstall --user 0 com.samsung.android.samsungpassautofill                 #Samsung pass autofill service
-adb shell pm uninstall --user 0 com.samsung.android.scloud                              #Samsung cloud
 adb shell pm uninstall --user 0 com.samsung.android.scs
 adb shell pm uninstall --user 0 com.samsung.android.sdk.handwriting                     #Handwriting service 
 adb shell pm uninstall --user 0 com.samsung.android.sdm.config
@@ -235,8 +244,12 @@ adb shell pm uninstall --user 0 com.samsung.android.spayfw                      
 adb shell pm uninstall --user 0 com.samsung.android.spaymini                            #Samasung Pay Mini
 adb shell pm uninstall --user 0 com.samsung.android.stickercenter                       #Sticker centre
 adb shell pm uninstall --user 0 com.samsung.android.svcagent                            #Samsung mate agent
+adb shell pm uninstall --user 0 com.samsung.android.svoiceime                           #Samsung Voice Input 
 adb shell pm uninstall --user 0 com.samsung.android.tadownloader                        #TA Downloader
 adb shell pm uninstall --user 0 com.samsung.android.tapack.authfw
+adb shell pm uninstall --user 0 com.samsung.android.themecenter
+adb shell pm uninstall --user 0 com.samsung.android.themestore
+adb shell pm uninstall --user 0 com.samsung.android.uds                                 #Ultra Data Saving mode
 adb shell pm uninstall --user 0 com.samsung.android.visionarapps                        #Bixby Vision
 adb shell pm uninstall --user 0 com.samsung.android.visionintelligence                  #Bixby Vision 
 adb shell pm uninstall --user 0 com.samsung.android.visualars
@@ -256,6 +269,7 @@ adb shell pm uninstall --user 0 com.samsung.safetyinformation                   
 adb shell pm uninstall --user 0 com.samsung.sait.sohservice                        
 adb shell pm uninstall --user 0 com.samsung.sec.android.application.csc
 adb shell pm uninstall --user 0 com.samsung.sec.android.teegris.tui_service             #Trusted User Interface 
+adb shell pm uninstall --user 0 com.samsung.SMT                                         #Text to speech engine of Samsung
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_de_de_f00
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_en_gb_f00
 adb shell pm uninstall --user 0 com.samsung.SMT.lang_en_us_l03
