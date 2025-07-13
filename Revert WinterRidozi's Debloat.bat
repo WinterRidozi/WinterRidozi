@@ -1,38 +1,23 @@
-echo Debloat + Tweaks by WinterRidozi@telegram
+echo Revert Debloat by WinterRidozi@telegram
 adb devices
-echo Boost Battery
-adb shell settings put global adaptive_battery_management_enabled 0
-adb shell settings put global cached_apps_freezer enabled
-adb shell settings put global protect_battery 1
-adb shell settings put secure send_action_app_error 0
-
-echo Location
-adb shell settings put global assisted_gps_enabled 1
-adb shell settings put global wifi_scan_always_enabled 1
-
-echo Boost Performance
-adb shell settings put global ram_expand_size 0
-adb shell settings put global zram_enabled 0
-adb shell settings put global online_manual_url 0
-adb shell settings put global bug_report 0
-adb shell settings put global debug_app 0
-
-echo Disabling GOS App
-adb shell pm disable-user --user 0 com.samsung.android.game.gos
-adb shell pm clear --user 0 com.samsung.android.game.gos
-adb shell settings put secure game_auto_temperature_control 0
+#adb shell cmd package install-existing com.samsung.android.mdx
+#adb shell cmd package install-existing com.samsung.android.mdx.kit
+#adb shell cmd package install-existing com.samsung.cmh                                        #Somehow related to Video Calling
+#adb shell cmd package install-existing com.samsung.crane                                      #Video Calling related 
 adb shell cmd package install-existing android.autoinstalls.config.samsung
 adb shell cmd package install-existing com.amazon.avod.thirdpartyclient              
 adb shell cmd package install-existing com.android.apps.tag                                    #Tags
 adb shell cmd package install-existing com.android.bips                                        #Default Print service
 adb shell cmd package install-existing com.android.bipscom.wsomacp
 adb shell cmd package install-existing com.android.bookmarkprovider                            #Bookmarks Provider
-adb shell cmd package install-existing com.android.calllogbackup        
+adb shell cmd package install-existing com.android.calllogbackup                               
+adb shell cmd package install-existing com.android.chrome
 adb shell cmd package install-existing com.android.cts.ctsshim
 adb shell cmd package install-existing com.android.cts.priv.ctsshim
 adb shell cmd package install-existing com.android.dreams.basic                                #Basic Daydreams
 adb shell cmd package install-existing com.android.dreams.phototable
-adb shell cmd package install-existing com.android.dynsystem                                   
+adb shell cmd package install-existing com.android.dynsystem
+adb shell cmd package install-existing com.android.egg                                        
 adb shell cmd package install-existing com.android.emergency
 adb shell cmd package install-existing com.android.hotspot2                                    #OsuLogin
 adb shell cmd package install-existing com.android.hotwordenrollment.okgoogle
@@ -102,6 +87,7 @@ adb shell cmd package install-existing com.google.android.apps.gcs								#Googl
 adb shell cmd package install-existing com.google.android.apps.maps
 adb shell cmd package install-existing com.google.android.apps.messaging
 adb shell cmd package install-existing com.google.android.apps.photos
+adb shell cmd package install-existing com.google.android.apps.restore
 adb shell cmd package install-existing com.google.android.apps.setupwizard.searchselector
 adb shell cmd package install-existing com.google.android.apps.tachyon                         #Google Duo
 adb shell cmd package install-existing com.google.android.apps.turbo
@@ -113,6 +99,7 @@ adb shell cmd package install-existing com.google.android.cellbroadcastreceiver
 adb shell cmd package install-existing com.google.android.configupdater
 adb shell cmd package install-existing com.google.android.ext.shared                           #Android Shared Library
 adb shell cmd package install-existing com.google.android.feedback                             #Crash reports feedbacks
+adb shell cmd package install-existing com.google.android.gm                                   #Gmail 
 adb shell cmd package install-existing com.google.android.gms.location.history
 adb shell cmd package install-existing com.google.android.googlequicksearchbox
 adb shell cmd package install-existing com.google.android.healthconnect.controller
@@ -122,8 +109,11 @@ adb shell cmd package install-existing com.google.android.partnersetup
 adb shell cmd package install-existing com.google.android.printservice.recommendation
 adb shell cmd package install-existing com.google.android.projection.gearhead                  #Android Auto
 adb shell cmd package install-existing com.google.android.setupwizard
+adb shell cmd package install-existing com.google.android.tts                                  #Google Text to Speech
 adb shell cmd package install-existing com.google.android.videos                               #Video Player
+adb shell cmd package install-existing com.google.android.youtube
 adb shell cmd package install-existing com.google.ar.core                                      #AR Core
+adb shell cmd package install-existing com.google.audio.hearing.visualization.accessibility.scribe  #Live Transcribe
 adb shell cmd package install-existing com.hiya.star                                           #Spam Filter App
 adb shell cmd package install-existing com.knox.vpn.proxyhandler
 adb shell cmd package install-existing com.microsoft.appmanager
@@ -193,6 +183,7 @@ adb shell cmd package install-existing com.samsung.android.game.gos
 adb shell cmd package install-existing com.samsung.android.hdmapp
 adb shell cmd package install-existing com.samsung.android.homemode
 adb shell cmd package install-existing com.samsung.android.icecone                             #Keyboard Content Handler
+adb shell cmd package install-existing com.samsung.android.intellivoiceservice
 adb shell cmd package install-existing com.samsung.android.ipsgeofence                         #Samsung Visit-in
 adb shell cmd package install-existing com.samsung.android.kidsinstaller                       #Kids installer
 adb shell cmd package install-existing com.samsung.android.knox.analytics.uploader
@@ -206,6 +197,7 @@ adb shell cmd package install-existing com.samsung.android.mapsagent            
 adb shell cmd package install-existing com.samsung.android.mateagent                           #Samsung Galaxy Agents
 adb shell cmd package install-existing com.samsung.android.mcfds
 adb shell cmd package install-existing com.samsung.android.mcfserver                           #Samsung Multiple Connectivity
+adb shell cmd package install-existing com.samsung.android.mdecservice                         #Call and text on other devices
 adb shell cmd package install-existing com.samsung.android.mdm                                 #Knox manage
 adb shell cmd package install-existing com.samsung.android.mdx
 adb shell cmd package install-existing com.samsung.android.mobileservice                       #Samsung Experience
@@ -216,7 +208,6 @@ adb shell cmd package install-existing com.samsung.android.samsungpass
 adb shell cmd package install-existing com.samsung.android.samsungpass                         #Samsung pass
 adb shell cmd package install-existing com.samsung.android.samsungpassautofill
 adb shell cmd package install-existing com.samsung.android.samsungpassautofill                 #Samsung pass autofill service
-adb shell cmd package install-existing com.samsung.android.scloud                              #Samsung cloud
 adb shell cmd package install-existing com.samsung.android.scs
 adb shell cmd package install-existing com.samsung.android.sdk.handwriting                     #Handwriting service 
 adb shell cmd package install-existing com.samsung.android.sdm.config
@@ -235,8 +226,12 @@ adb shell cmd package install-existing com.samsung.android.spayfw               
 adb shell cmd package install-existing com.samsung.android.spaymini                            #Samasung Pay Mini
 adb shell cmd package install-existing com.samsung.android.stickercenter                       #Sticker centre
 adb shell cmd package install-existing com.samsung.android.svcagent                            #Samsung mate agent
+adb shell cmd package install-existing com.samsung.android.svoiceime                           #Samsung Voice Input 
 adb shell cmd package install-existing com.samsung.android.tadownloader                        #TA Downloader
 adb shell cmd package install-existing com.samsung.android.tapack.authfw
+adb shell cmd package install-existing com.samsung.android.themecenter
+adb shell cmd package install-existing com.samsung.android.themestore
+adb shell cmd package install-existing com.samsung.android.uds                                 #Ultra Data Saving mode
 adb shell cmd package install-existing com.samsung.android.visionarapps                        #Bixby Vision
 adb shell cmd package install-existing com.samsung.android.visionintelligence                  #Bixby Vision 
 adb shell cmd package install-existing com.samsung.android.visualars
@@ -256,6 +251,7 @@ adb shell cmd package install-existing com.samsung.safetyinformation            
 adb shell cmd package install-existing com.samsung.sait.sohservice                        
 adb shell cmd package install-existing com.samsung.sec.android.application.csc
 adb shell cmd package install-existing com.samsung.sec.android.teegris.tui_service             #Trusted User Interface 
+adb shell cmd package install-existing com.samsung.SMT                                         #Text to speech engine of Samsung
 adb shell cmd package install-existing com.samsung.SMT.lang_de_de_f00
 adb shell cmd package install-existing com.samsung.SMT.lang_en_gb_f00
 adb shell cmd package install-existing com.samsung.SMT.lang_en_us_l03
@@ -322,3 +318,5 @@ adb shell cmd package install-existing in.amazon.mShop.android.shopping
 adb shell cmd package install-existing ru.yandex.disk
 adb shell cmd package install-existing ru.yandex.searchplugin
 adb shell cmd package install-existing ru.yandex.yandexmaps
+adb shell cmd package install-existing com.sec.android.soagent
+adb shell cmd package install-existing com.sec.android.systemupdate 
