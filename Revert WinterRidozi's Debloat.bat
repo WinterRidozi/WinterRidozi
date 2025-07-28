@@ -131,7 +131,6 @@ adb shell cmd package install-existing com.samsung.aasaservice                  
 adb shell cmd package install-existing com.samsung.android.accessibility.talkback
 adb shell cmd package install-existing com.samsung.android.aircommandmanager
 adb shell cmd package install-existing com.samsung.android.alive.service                       #Device Customisation Service
-adb shell cmd package install-existing com.samsung.android.allshare.service.mediashare         #Quick share
 adb shell cmd package install-existing com.samsung.android.app.appsedge                        #Breaks Split Screen
 adb shell cmd package install-existing com.samsung.android.app.camera.sticker.facearavatar.preload   #Face avatar
 adb shell cmd package install-existing com.samsung.android.app.clipboardedge
