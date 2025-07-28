@@ -176,7 +176,6 @@ adb shell pm uninstall --user 0 com.samsung.android.aremojieditor
 adb shell pm uninstall --user 0 com.samsung.android.aremojieditor                       #AR emoji editor
 adb shell pm uninstall --user 0 com.samsung.android.arzone                              #AR Zone
 adb shell pm uninstall --user 0 com.samsung.android.authfw
-adb shell pm uninstall --user 0 com.samsung.android.aware.service                       #Quick Share 
 adb shell pm uninstall --user 0 com.samsung.android.bbc.bbcagent                        #Bixby stuff
 adb shell pm uninstall --user 0 com.samsung.android.beaconmanager
 adb shell pm uninstall --user 0 com.samsung.android.bixby.agent                         #Bixby Agent
