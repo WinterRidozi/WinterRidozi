@@ -142,7 +142,6 @@ adb shell cmd package install-existing com.samsung.android.app.reminder
 adb shell cmd package install-existing com.samsung.android.app.routines
 adb shell cmd package install-existing com.samsung.android.app.sbrowseredge                    #Samsung Internet's edge panel
 adb shell cmd package install-existing com.samsung.android.app.settings.bixby                  #Bixby app
-adb shell cmd package install-existing com.samsung.android.app.sharelive                       #Quick Share
 adb shell cmd package install-existing com.samsung.android.app.simplesharing                   #Link sharing
 adb shell cmd package install-existing com.samsung.android.app.social                          #Samsung Social
 adb shell cmd package install-existing com.samsung.android.app.soundpicker                     #Sound Picker
@@ -319,3 +318,4 @@ adb shell cmd package install-existing ru.yandex.searchplugin
 adb shell cmd package install-existing ru.yandex.yandexmaps
 adb shell cmd package install-existing com.sec.android.soagent
 adb shell cmd package install-existing com.sec.android.systemupdate 
+
