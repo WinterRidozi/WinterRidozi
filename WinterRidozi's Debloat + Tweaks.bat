@@ -161,7 +161,6 @@ adb shell pm uninstall --user 0 com.samsung.android.app.reminder
 adb shell pm uninstall --user 0 com.samsung.android.app.routines
 adb shell pm uninstall --user 0 com.samsung.android.app.sbrowseredge                    #Samsung Internet's edge panel
 adb shell pm uninstall --user 0 com.samsung.android.app.settings.bixby                  #Bixby app
-adb shell pm uninstall --user 0 com.samsung.android.app.sharelive                       #Quick Share
 adb shell pm uninstall --user 0 com.samsung.android.app.simplesharing                   #Link sharing
 adb shell pm uninstall --user 0 com.samsung.android.app.social                          #Samsung Social
 adb shell pm uninstall --user 0 com.samsung.android.app.soundpicker                     #Sound Picker
@@ -335,3 +334,4 @@ adb shell pm uninstall --user 0 in.amazon.mShop.android.shopping
 adb shell pm uninstall --user 0 ru.yandex.disk
 adb shell pm uninstall --user 0 ru.yandex.searchplugin
 adb shell pm uninstall --user 0 ru.yandex.yandexmaps
+
